@@ -12,7 +12,7 @@ $ npm install -g vue-cli
 $ vue init joneqian/vue2-express-family my-project
 $ cd my-project
 $ npm install
-$ npm run dev //运行开始模式
+$ npm run dev //运行调试模式
 ```
 如果你的8080端口被占用，请修改`/config/index.js`文件。
 
