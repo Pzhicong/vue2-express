@@ -16,6 +16,18 @@ $ npm run dev //运行开始模式
 ```
 如果你的8080端口被占用，请修改`/config/index.js`文件。
 
+## 生产环境部署和运行
+将代码clone到服务器，运行:
+``` bash
+$ npm install
+$ cd server
+$ npm install
+$ cd ..
+$ npm run build
+```
+脚本将在server目录自动创建`public`和`views`目录。
+通过`node server/bin/www`启动项目(生产环境建议使用pm2)。
+
 ## 项目结构
 
 ```
@@ -59,3 +71,26 @@ $ npm run dev //运行开始模式
 ├── index.html
 └── package.json
 ```
+
+## 发送 ajax 请求
+
+由于我非常非常懒，并且觉得`axios`名字比较奇怪，因此利用`VUX`直接把`axios`封装成插件，你可以直接引用插件。
+
+你可以查看`src/main.js`
+``` js
+import AjaxPlugin from './plugins/ajax';
+Vue.use(AjaxPlugin);
+```
+
+然后你就可以愉快的偷懒了，使用`this.$http`进行调用了。
+``` js
+export default {
+  name: 'hello',
+  mounted () {
+    this.$http(url, {})
+        .then(data => {})
+        .catch(error => {});
+  }
+};
+```
+由于我自己项目的需要，所以在`src/plugins/ajax/http.js`中对axios做了封装，你可以根据自己情况和喜好进行修改。

@@ -2,7 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <ul>
-      <li><a href="https://vuejs.org" target="_blank">打个广告，看不看，你随意！！！</a></li>
+      <li><a href="https://github.com/joneqian/vue2-express-family" target="_blank">打个广告，看不看，你随意！！！</a></li>
     </ul>
   </div>
 </template>
