@@ -22,10 +22,10 @@ Vue.use(VueRouter);
 
 // error，loading是图片路径, 用require引入
 Vue.use(VueLazyload, {
-      error: require('./assets/images/404.gif'),
-      loading: require('./assets/images/loading.gif'),
-      attempt: 1{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
-    }){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+  error: require('./assets/images/404.gif'),
+  loading: require('./assets/images/loading.gif'),
+  attempt: 1{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+}){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 
 const router = new VueRouter({
