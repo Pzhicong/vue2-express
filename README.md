@@ -94,3 +94,11 @@ export default {
 };
 ```
 由于我自己项目的需要，所以在`src/plugins/ajax/http.js`中对axios做了封装，你可以根据自己情况和喜好进行修改。
+
+## 在dev中和express通讯
+请在`config/index.js`的proxyTable中设置代理，比如
+```json
+proxyTable: {
+  '/customer': 'http://localhost:10091'
+}
+```
