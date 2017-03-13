@@ -1,8 +1,6 @@
-# vue-webpack-boilerplate
+# vue-express-family
 
-> A full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction.
-
-> This template is Vue 2.0 compatible. For Vue 1.x use this command: `vue init webpack#1.0 my-project`
+> Vue 2.0全家桶套餐，包含vue-router2.0和vuex2.0，集成express作为web server。
 
 ## Documentation
 
@@ -15,7 +13,7 @@ This is a project template for [vue-cli](https://github.com/vuejs/vue-cli). **It
 
 ``` bash
 $ npm install -g vue-cli
-$ vue init webpack my-project
+$ vue init joneqian/vue-express-family my-project
 $ cd my-project
 $ npm install
 $ npm run dev
