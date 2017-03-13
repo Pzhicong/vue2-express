@@ -10,11 +10,11 @@
  */
 const routers = [
   {
-    path: 'login',
-    name: 'login',
+    path: 'home',
+    name: 'home',
     component(resolve) {
-      require.ensure(['../views/login.vue'], () => {
-        resolve(require('../views/login.vue'));
+      require.ensure(['../views/Home.vue'], () => {
+        resolve(require('../views/Home.vue'));
       });
     },
     meta: {requiresAuth: false}

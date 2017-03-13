@@ -1,7 +1,7 @@
 /**
  * Created by qianqing on 2017/1/22.
  */
-import login from './login';
+import home from './home';
 
 const routers = [
   {
@@ -13,7 +13,7 @@ const routers = [
       });
     },
     children: [
-      ...login,
+      ...home,
       {
         path: '*',
         component(resolve) {
