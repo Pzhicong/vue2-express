@@ -1,8 +1,10 @@
 /**
  * Created by qianqing on 2017/1/22.
  */
+import Vue from 'vue';
 import VueRouter from 'vue-router';
 import home from './home';
+import store from '../store';
 
 Vue.use(VueRouter);
 
@@ -31,17 +33,15 @@ router.beforeEach((to, from, next) => {
   if (to.matched.some(r => r.meta.requireAuth)) {
     if (store.state.token) {
       next();
-    }
-    else {
+    } else {
       next({
         path: '/login',
         query: {redirect: to.fullPath}
-      })
+      });
     }
-  }
-  else {
+  } else {
     next();
   }
-})
+});
 
 export default router;

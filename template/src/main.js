@@ -22,10 +22,6 @@ Vue.use(VueLazyload, {
   attempt: 1{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
 });
 
-const router = new VueRouter({
-  routes{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
-});
-
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
