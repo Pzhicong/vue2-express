@@ -13,7 +13,10 @@
     "lint": "eslint --ext .js,.vue src{{#unit}} test/unit/specs{{/unit}}{{#e2e}} test/e2e/specs{{/e2e}}"{{/lint}}
   },
   "dependencies": {
+    "axios": "^0.15.3",
+    "formidable": "^1.1.1",
     "vue": "^2.2.2",
+    "vue-lazyload": "^1.0.0-rc12",
     "vue-router": "^2.2.0"
   },
   "devDependencies": {

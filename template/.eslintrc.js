@@ -8,6 +8,9 @@ module.exports = {
   },
   env: {
     browser: true,
+    commonjs: true,
+    es6: true,
+    jquery: true
   },
   {{#if_eq lintConfig "standard"}}
   // https://github.com/feross/standard/blob/master/RULES.md#javascript-standard-style
