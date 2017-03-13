@@ -97,7 +97,7 @@ export default {
 
 ## 在dev中和express通讯
 请在`config/index.js`的proxyTable中设置代理，比如
-```json
+```js
 proxyTable: {
   '/customer': 'http://localhost:10091'
 }
