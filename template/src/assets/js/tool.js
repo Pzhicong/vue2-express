@@ -1,7 +1,4 @@
 // 通用方法函数集
-
-import axios from 'axios';
-
 /***
  * 设备检查
  * @returns {*}
@@ -60,54 +57,6 @@ export function getSearch(location) {
 export function isPositiveInteger(s) { //  是否为正整数
   let re = /^[0-9]*[1-9][0-9]*$/;
   return re.test(s);
-}
-
-/***
- * ajax请求函数
- * @param url
- * @param json
- * @param method
- * @param timeout
- * @returns {*}
- */
-export function ajax(url, json, method = 'post', timeout = 25000) {
-  var promise = new Promise((resolve, reject) => {
-    if (!url || !json) {
-      reject({status: 0, msg: `url or josn is null`});
-    }
-
-    let req = {
-      url: url,
-      method: method,
-      data: json,
-      timeout: timeout,
-      headers: {'Accept': 'application/json', 'Content-Type': 'application/json'}
-    };
-
-    axios(req)
-      .then((response) => {
-        let res = response.data;
-        if (res.IsSuccess === 1) {
-          resolve(res.Data);
-        } else {
-          if (res.ErrorMessage === 'Request failed with status code 401') { // 如需对token过期做特殊处理，请修改
-            reject(res.ErrorMessage);
-          } else {
-            reject(res.ErrorMessage);
-          }
-        }
-      })
-      .catch((error) => {
-        console.error(`ajax error: ${url} ### ${error}`);
-        if (error.message) {
-          reject(error.message);
-        } else {
-          reject(`ajax 异常: ${url}`);
-        }
-      });
-  });
-
-  return promise;
 }
 
 /***

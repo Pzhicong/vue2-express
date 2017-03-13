@@ -20,6 +20,9 @@ const customer = {
 };
 
 export default new Vuex.Store({
+  state: {
+    token: ''
+  },
   modules: {
     customer
   }
