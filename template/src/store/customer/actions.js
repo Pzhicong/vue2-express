@@ -1,7 +1,7 @@
 /**
  * Created by qianqing on 2017/2/4.
  */
-import {ajax} from '../../assets/tool';
+import {ajax} from '../../assets/js/tool';
 import * as type from './type';
 
 export default {

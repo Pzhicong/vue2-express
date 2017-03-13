@@ -17,7 +17,8 @@
     "formidable": "^1.1.1",
     "vue": "^2.2.2",
     "vue-lazyload": "^1.0.0-rc12",
-    "vue-router": "^2.2.0"
+    "vue-router": "^2.2.0",
+    "vuex": "^2.2.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.2",

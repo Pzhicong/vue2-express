@@ -11,7 +11,6 @@ import routes from './router'{{#if_eq lintConfig "airbnb"}};{{/if_eq}} // 引入
 import VueLazyload from 'vue-lazyload'{{#if_eq lintConfig "airbnb"}};{{/if_eq}} // 引入图片懒加载模块
 import inputPrice from './directive/input-price'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 import inputQuantity from './directive/input-quantity'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-import {getCache} from './assets/function'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 import './assets/css/my.css'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 Vue.use(inputPrice);
