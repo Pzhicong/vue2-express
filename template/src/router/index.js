@@ -1,15 +1,29 @@
-import Vue from 'vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-import Router from 'vue-router'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-import Hello from '@/components/Hello'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+/**
+ * Created by qianqing on 2017/1/22.
+ */
+import login from './login';
 
-Vue.use(Router){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+const routers = [
+  {
+    path: '/',
+    name: 'index',
+    component(resolve) {
+      require.ensure(['../App.vue'], () => {
+        resolve(require('../App.vue'));
+      });
+    },
+    children: [
+      ...login,
+      {
+        path: '*',
+        component(resolve) {
+          require.ensure(['../views/404.vue'], () => {
+            resolve(require('../views/404.vue'));
+          });
+        }
+      }
+    ]
+  }
+];
 
-export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'Hello',
-      component: Hello{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
-    }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
-  ]{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
-}){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+export default routers;
