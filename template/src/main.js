@@ -7,7 +7,7 @@ import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
 import store from './store';
-import { AjaxPlugin } from './plugins/ajax'
+import AjaxPlugin from './plugins/ajax';
 import VueLazyload from 'vue-lazyload'; // 引入图片懒加载模块
 import inputPrice from './directive/input-price';
 import inputQuantity from './directive/input-quantity';
