@@ -1,5 +1,5 @@
 {
-  "name": "vue-express-family",
+  "name": "vue2-express-family",
   "version": "1.0.0",
   "license": "MIT",
   "description": "Vue 2.0全家桶套餐，包含vue-router2.0和vuex2.0，集成express作为web server。",
