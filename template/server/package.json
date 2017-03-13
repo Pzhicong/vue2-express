@@ -1,7 +1,7 @@
 {
-  "name": "vue2-express-family-web-server",
+  "name": "vue2-express-web-server",
   "version": "1.0.0",
-  "description": "vue2-express-family-web-server",
+  "description": "vue2-express-web-server",
   "author": "joneqian",
   "private": true,
   "scripts": {

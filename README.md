@@ -1,4 +1,4 @@
-# vue2-express-family
+# vue2-express
 
 > Vue 2.0全家桶套餐，包含vue-router2.0和vuex2.0，集成express作为web server。
 
@@ -9,7 +9,7 @@
 ## 运行及构建
 ``` bash
 $ npm install -g vue-cli
-$ vue init joneqian/vue2-express-family my-project
+$ vue init joneqian/vue2-express my-project
 $ cd my-project
 $ npm install
 $ npm run dev //运行调试模式
