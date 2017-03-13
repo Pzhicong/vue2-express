@@ -4,25 +4,14 @@
 import home from './home';
 
 const routers = [
+  ...home,
   {
-    path: '/',
-    name: 'index',
+    path: '*',
     component(resolve) {
-      require.ensure(['../App.vue'], () => {
-        resolve(require('../App.vue'));
+      require.ensure(['../views/404.vue'], () => {
+        resolve(require('../views/404.vue'));
       });
-    },
-    children: [
-      ...home,
-      {
-        path: '*',
-        component(resolve) {
-          require.ensure(['../views/404.vue'], () => {
-            resolve(require('../views/404.vue'));
-          });
-        }
-      }
-    ]
+    }
   }
 ];
 
