@@ -6,7 +6,7 @@
  * @param $router
  * @param isReplace
  */
-export function go (url, $router = null, isReplace = false) {
+export function go(url, $router = null, isReplace = false) {
   if (/^javas/.test(url) || !url) {
     return;
   }
@@ -34,7 +34,7 @@ export function go (url, $router = null, isReplace = false) {
  * @param $router
  * @returns string
  */
-export function getUrl (url, $router) {
+export function getUrl(url, $router) {
   // Make sure the href is right in hash mode
   if ($router && !$router._history && typeof url === 'string' && !/http/.test(url)) {
     return `#!${url}`

@@ -6,7 +6,7 @@
  * @param fmt
  * @returns {*}
  */
-export function dateFormat (date, fmt) {
+export function dateFormat(date, fmt) {
   let o = {
     'M+': date.getMonth() + 1,                 //月份
     'd+': date.getDate(),                    //日
@@ -33,7 +33,7 @@ export function dateFormat (date, fmt) {
  * @param strFormat
  * @returns {*}
  */
-export function dateStrFormat (strDate, strFormat) {
+export function dateStrFormat(strDate, strFormat) {
   let tmpDate = new Date();
   let longTime = Date.parse(strDate);
   if (isNaN(longTime)) { //IE兼容
@@ -67,7 +67,7 @@ export function dateStrFormat (strDate, strFormat) {
 /***
  * 获得本周起止时间
  */
-export function getCurrentWeek () {
+export function getCurrentWeek() {
   //起止日期数组
   let startStop = new Array();
   //获取当前时间
@@ -97,7 +97,7 @@ export function getCurrentWeek () {
 /***
  * 获得本月的起止时间
  */
-export function getCurrentMonth () {
+export function getCurrentMonth() {
   //起止日期数组
   let startStop = new Array();
   //获取当前时间
@@ -136,7 +136,7 @@ export function getCurrentMonth () {
  * 得到本季度开始的月份
  * @param month 需要计算的月份
  ***/
-export function getQuarterSeasonStartMonth (month) {
+export function getQuarterSeasonStartMonth(month) {
   let quarterMonthStart = 0;
   let spring = 0; //春
   let summer = 3; //夏
@@ -160,7 +160,7 @@ export function getQuarterSeasonStartMonth (month) {
  * @param year年份
  * @param month月份
  * */
-export function getMonthDays (year, month) {
+export function getMonthDays(year, month) {
   //本月第一天 1-31
   let relativeDate = new Date(year, month, 1);
   //获得当前月份0-11
@@ -188,7 +188,7 @@ export function getMonthDays (year, month) {
 /**
  * 获得本季度的起止日期
  */
-export function getCurrentSeason () {
+export function getCurrentSeason() {
   //起止日期数组
   let startStop = new Array();
   //获取当前时间
@@ -217,7 +217,7 @@ export function getCurrentSeason () {
  * 得到本年的起止日期
  *
  */
-export function getCurrentYear () {
+export function getCurrentYear() {
   //起止日期数组
   let startStop = new Array();
   //获取当前时间
@@ -241,7 +241,7 @@ export function getCurrentYear () {
  * @param year 年
  * @param month 月
  **/
-export function getPriorMonthFirstDay (year, month) {
+export function getPriorMonthFirstDay(year, month) {
   //年份为0代表,是本年的第一月,所以不能减
   if (month === 0) {
     month = 11;//月份为上年的最后月份
@@ -257,7 +257,7 @@ export function getPriorMonthFirstDay (year, month) {
 /**
  * 获得上一月的起止日期
  * ***/
-export function getPreviousMonth () {
+export function getPreviousMonth() {
   //起止日期数组
   let startStop = new Array();
   //获取当前时间
@@ -281,7 +281,7 @@ export function getPreviousMonth () {
 /**
  * 获得上一周的起止日期
  * **/
-export function getPreviousWeek () {
+export function getPreviousWeek() {
   //起止日期数组
   let startStop = new Array();
   //获取当前时间
@@ -313,7 +313,7 @@ export function getPreviousWeek () {
  * year 这个年应该是运算后得到的当前本季度的年份
  * month 这个应该是运算后得到的当前季度的开始月份
  * */
-export function getPriorSeasonFirstDay (year, month) {
+export function getPriorSeasonFirstDay(year, month) {
   let quarterMonthStart = 0;
   let spring = 0; //春
   let summer = 3; //夏
@@ -342,7 +342,7 @@ export function getPriorSeasonFirstDay (year, month) {
 /**
  * 得到上季度的起止日期
  * **/
-export function getPreviousSeason () {
+export function getPreviousSeason() {
   //起止日期数组
   let startStop = new Array();
   //获取当前时间
@@ -364,7 +364,7 @@ export function getPreviousSeason () {
 /**
  * 得到去年的起止日期
  * **/
-export function getPreviousYear () {
+export function getPreviousYear() {
   //起止日期数组
   let startStop = new Array();
   //获取当前时间
@@ -386,7 +386,7 @@ export function getPreviousYear () {
  * @param strDateEnd
  * @returns {Number|*}
  */
-export function getDiffDays (strDateStart, strDateEnd) {
+export function getDiffDays(strDateStart, strDateEnd) {
   let oDate1;
   let oDate2;
   let iDays;
@@ -403,7 +403,7 @@ export function getDiffDays (strDateStart, strDateEnd) {
  * @param dateStr
  * @param days
  */
-export function getBeforeDays (dateStr, days) {
+export function getBeforeDays(dateStr, days) {
   let now = new Date(dateStr);
   now = new Date((now / 1000 - 86400 * days) * 1000);
   return dateFormat(now, 'yyyy-MM-dd');

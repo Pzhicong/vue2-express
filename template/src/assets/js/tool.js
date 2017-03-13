@@ -116,7 +116,7 @@ export function ajax(url, json, method = 'post', timeout = 25000) {
  * @param replaceBreak
  * @returns string
  */
-export function stringTrim (str, replaceBreak) {
+export function stringTrim(str, replaceBreak) {
   str = str.replace(/^\s\s*/, '');
   let ws = /\s/;
   let i = str.length;
