@@ -9,6 +9,11 @@ import store from '../store';
 Vue.use(VueRouter);
 
 const routes = [
+  {
+    path: '',
+    redirect: '/home',
+    meta: {requiresAuth: false}
+  },
   ...home,
   {
     path: '*',

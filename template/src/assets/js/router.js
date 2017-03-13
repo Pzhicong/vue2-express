@@ -11,7 +11,7 @@ export function go(url, $router = null, isReplace = false) {
     return;
   }
 
-  let useRouter = typeof url === 'object' || ($router && typeof url === 'string' && !/http/.test(url))
+  let useRouter = typeof url === 'object' || ($router && typeof url === 'string' && !/http/.test(url));
   if (useRouter) {
     if (!isReplace) {
       $router.push(url);
@@ -24,7 +24,6 @@ export function go(url, $router = null, isReplace = false) {
     } else {
       window.location.replace(url);
     }
-
   }
 }
 
@@ -37,7 +36,7 @@ export function go(url, $router = null, isReplace = false) {
 export function getUrl(url, $router) {
   // Make sure the href is right in hash mode
   if ($router && !$router._history && typeof url === 'string' && !/http/.test(url)) {
-    return `#!${url}`
+    return `#!${url}`;
   }
-  return url && typeof url !== 'object' ? url : 'javascript:void(0);'
+  return url && typeof url !== 'object' ? url : 'javascript:void(0);';
 }

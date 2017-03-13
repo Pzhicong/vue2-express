@@ -1,45 +1,46 @@
 /**
  * Created by qianqing on 2017/3/13.
  */
-import axios from 'axios'
-import store from '../../store'
-import router from './router'
+import axios from 'axios';
+// import store from '../../store';
+// import router from '../../router';
 
+// 将token直接放在前端还是有风险，目前采取在server端统一存储token
 // axios 配置
-axios.defaults.timeout = 25000;
-axios.defaults.baseURL = 'https://api.github.com';
+// axios.defaults.timeout = 25000;
+// axios.defaults.baseURL = 'https://api.github.com';
 
 // http request 拦截器
-axios.interceptors.request.use(
-  config => {
-    if (store.state.token) {
-      config.headers.Authorization = `token ${store.state.token}`;
-    }
-    return config;
-  },
-  err => {
-    return Promise.reject(err);
-  });
+// axios.interceptors.request.use(
+//   config => {
+//     if (store.state.token) {
+//       config.headers.Authorization = `token ${store.state.token}`;
+//     }
+//     return config;
+//   },
+//   err => {
+//     return Promise.reject(err);
+//   });
 
 // http response 拦截器
-axios.interceptors.response.use(
-  response => {
-    return response;
-  },
-  error => {
-    if (error.response) {
-      switch (error.response.status) {
-        case 401:
-          // 401 清除token信息并跳转到登录页面
-          router.replace({
-            path: 'login',
-            query: {redirect: router.currentRoute.fullPath}
-          })
-      }
-    }
-    // console.log(JSON.stringify(error));//console : Error: Request failed with status code 402
-    return Promise.reject(error.response.data)
-  });
+// axios.interceptors.response.use(
+//   response => {
+//     return response;
+//   },
+//   error => {
+//     if (error.response) {
+//       switch (error.response.status) {
+//         case 401:
+//           // 401 清除token信息并跳转到登录页面
+//           router.replace({
+//             path: 'login',
+//             query: {redirect: router.currentRoute.fullPath}
+//           });
+//       }
+//     }
+//     // console.log(JSON.stringify(error));//console : Error: Request failed with status code 402
+//     return Promise.reject(error.response.data);
+//   });
 
 /***
  * ajax请求函数
@@ -49,7 +50,7 @@ axios.interceptors.response.use(
  * @param timeout
  * @returns {*}
  */
-export function ajax(url, json, method = 'post', timeout = 25000) {
+export default function (url, json, method = 'post', timeout = 25000) {
   var promise = new Promise((resolve, reject) => {
     if (!url || !json) {
       reject({status: 0, msg: `url or josn is null`});
