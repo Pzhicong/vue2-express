@@ -1,5 +1,4 @@
 # vue2-express
-
 > Vue 2.0全家桶套餐，包含vue-router2.0和vuex2.0，集成express作为web server。
 
 ## 前言
@@ -74,7 +73,7 @@ $ npm run build
 
 ## 发送 ajax 请求
 
-由于我非常非常懒，并且觉得`axios`名字比较奇怪，因此利用`VUX`直接把`axios`封装成插件，你可以直接引用插件。
+由于我非常非常懒，并且觉得`ajax`名字比较奇怪，因此利用`VUX`直接把`ajax`封装成插件，你可以直接引用插件。
 
 你可以查看`src/main.js`
 ``` js
